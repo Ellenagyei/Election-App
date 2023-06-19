@@ -1,12 +1,13 @@
 import React from 'react';
 import { Outlet } from 'react-router-dom';
 
-const Candidates = () => {
+const Positions = () => {
   return (
     <div>
-     < Outlet />
-      </div>
+        <Outlet />
+
+    </div>
   );
 };
 
-export default Candidates;
+export default Positions;

@@ -10,23 +10,46 @@ const AddVoter = () => {
         password:"",
 
     });
+
+const handleSubmit=()=>{
+    console.log(state)
+}
+
     return (
         <div>
-            <form>
-                <Input name="studentid" id="stuentid" type="text" title="Student ID" onChange={(e) =>{
-        setState(prevState => {
-            return
-            {...prevState,studentId:e.target}
-        } )
-                }
+            <form onSubmit={handleSubmit}>
+                <Input name="studentid" id="stuentid" type="text" title="Student ID" onChange={(e) =>{setState((prevState) => {
+                    return {...prevState, studentId: e.target.value}
+                })}
 
                 } />
-                <Input name="studentName" id="studentName" type="text" title="Student Name" />
-                <Input name="email" id="email" type="email" title="Email" />
-                <Input name="telephone" id="telephone" type="tell" title="Telephone" />
-                <Input name="password" id="password" type="password" title="Student Password" />
+                <Input name="studentName" id="studentName" type="text" title="Student Name" onChange={(e) =>{setState((prevState) => {
+                    return {...prevState, studentId: e.target.value}
+                })}
+
+                }  />
+                <Input name="email" id="email" type="email" title="Email" onChange={(e) =>{setState((prevState) => {
+                    return {...prevState, studentId: e.target.value}
+                })}
+
+                } /> 
+                <Input name="telephone" id="telephone" type="tell" title="Telephone" onChange={(e) =>{setState((prevState) => {
+                    return {...prevState, studentId: e.target.value}
+                })}
+
+                } />
+                <Input name="password" id="password" type="password" title="Student Password" onChange={(e) =>{setState((prevState) => {
+                    return {...prevState, studentId: e.target.value}
+                })}
+
+                } />
                 <Button title="Submit" type="Submit" />
             </form>
+            
+            
+            {
+
+            }
         </div>
     )
 }
